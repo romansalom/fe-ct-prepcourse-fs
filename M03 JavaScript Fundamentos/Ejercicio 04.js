@@ -7,7 +7,7 @@ function elevarAlCuadrado(num) {
   // Retorna el valor de "num" elevado al cuadrado.
   // Tu código:
   resultado = Math.pow(num, 2);
-  console.log(resultado);
+  return resultado;
 }
 elevarAlCuadrado(5);
 
@@ -15,7 +15,7 @@ function elevarAlCubo(num) {
   // Retorna el valor de "num" elevado al cubo.
   // Tu código:
   resultadoCubo = Math.pow(num, 3);
-  console.log(resultadoCubo);
+  return resultadoCubo;
 }
 elevarAlCubo(5);
 
@@ -23,7 +23,7 @@ function elevar(num, exponent) {
   // Retorna el valor de "num" elevado al exponente "exponent".
   // Tu código:
   resultadoElevar = Math.pow(num, exponent);
-  console.log(resultadoElevar);
+  return resultadoElevar;
 }
 elevar(2, 4);
 
@@ -31,7 +31,7 @@ function redondearNumero(num) {
   // Redondea "num" al entero más próximo y retórnalo.
   // Tu código:
   redondeoNumeroCercano = Math.round(num);
-  console.log(redondeoNumeroCercano);
+  return redondeoNumeroCercano;
 }
 redondearNumero(2.45);
 
@@ -39,7 +39,7 @@ function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba y retórnalo.
   // Tu código:
   redondeoNumeroGrande = Math.ceil(num);
-  console.log(redondeoNumeroGrande);
+  return redondeoNumeroGrande;
 }
 redondearHaciaArriba(3.27);
 
@@ -47,8 +47,8 @@ function numeroRandom(num) {
   // Genera un número al azar entre 0 y 1 y retórnalo.
   // Tu código:
 
-  numeroRandom = Math.random(num);
-  console.log(numeroRandom);
+  numeroRandoms = Math.random(num);
+  return numeroRandoms;
 }
 numeroRandom();
 

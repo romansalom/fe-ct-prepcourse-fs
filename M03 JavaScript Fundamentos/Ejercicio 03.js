@@ -6,22 +6,21 @@ function sonIguales(x, y) {
     // Retorna true si "x" e "y" son iguales.
     // De lo contrario, retorna false.
     // Tu código:
-    console.log(true);
+    return true;
   } else if (x != y) {
-    console.log(false);
+    return false;
   }
 }
 sonIguales((x = 1), (y = 1));
-sonIguales((x = 2), (y = 1));
 
 function tienenMismaLongitud(str1, str2) {
   // Retorna true si los dos strings tienen la misma longitud.
   // De lo contrario, retorna false.
   // Tu código:
   if (str1.length === str2.length) {
-    console.log(true);
+    return true;
   } else if (str1.length != str2.length) {
-    console.log(false);
+    return false;
   }
 }
 tienenMismaLongitud((str1 = 'hola'), (str2 = 'hola'));
@@ -32,9 +31,9 @@ function menosQueNoventa(num) {
   // De lo contrario, retorna false.
   // Tu código:
   if (num < 90) {
-    console.log(true);
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
 }
 menosQueNoventa(4125);
@@ -45,9 +44,9 @@ function mayorQueCincuenta(num) {
   // De lo contrario, retorna false.
   // Tu código:
   if (num > 50) {
-    console.log(true);
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
 }
 mayorQueCincuenta(23);
@@ -58,9 +57,9 @@ function esPar(num) {
   // De lo contrario, retorna false.
   // Tu código:
   if (num % 2 == 0) {
-    console.log(true);
+    return true;
   } else if (num % 2 > 0) {
-    console.log(false);
+    return false;
   }
 }
 esPar(30);
@@ -71,9 +70,9 @@ function esImpar(num) {
   // De lo contrario, retorna false.
   // Tu código:
   if (num % 2 > 0) {
-    console.log(true);
+    return true;
   } else if (num % 2 == 0) {
-    console.log(false);
+    return false;
   }
 }
 esImpar(5);

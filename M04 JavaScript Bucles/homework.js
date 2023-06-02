@@ -188,17 +188,20 @@ function esPrimo(num) {
   // [Nota]: los números negativos, 0 y 1 NO son números primos.
   // Tu código:
 
-  if (num === 0 || num == 1 || num == 4) return false;
-  for (let x = 2; x < num / 2; x++) {
-    if (num % x == 0) return false;
-  }
-  if (num === 0 && num === 1) {
+  if (num <= 1) {
     return false;
   }
+
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
   return true;
 }
 
-esPrimo(29);
+esPrimo(5);
 
 function esVerdadero(valor) {
   // Si "valor" es verdadero retornar "Soy verdadero".
@@ -214,13 +217,14 @@ function tieneTresDigitos(num) {
   // Si el número recibido tiene tres dígitos retornar true.
   // Caso contrario, retornar false.
   // Tu código:
-  if (num >= 100) {
+  if (num >= 100 && num < 999) {
     return true;
   } else if (num < 100) {
     return false;
   }
+  return false;
 }
-tieneTresDigitos(3);
+tieneTresDigitos(456);
 
 function doWhile(num) {
   // Implementar una función que aumente el valor recibido en 5 hasta un límite de 8 veces.

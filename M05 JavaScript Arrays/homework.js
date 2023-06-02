@@ -79,7 +79,13 @@ function agregarNumeros(arrayOfNums) {
 function promedioResultadosTest(resultadosTest) {
   // El parámetro "resultadosTest" es un arreglo de números.
   // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
-  // Tu código:
+  // Tu código
+  var suma = 0; // Variable para almacenar la suma de los elementos
+  for (var i = 0; i < resultadosTest.length; i++) {
+    suma += resultadosTest[i]; // Suma cada elemento del arreglo a la variable suma
+  }
+  var promedio = suma / resultadosTest.length; // Calcula el promedio dividiendo la suma entre la longitud del arreglo
+  return promedio;
 }
 
 function numeroMasGrande(arrayOfNums) {

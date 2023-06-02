@@ -36,6 +36,8 @@ function multiplica(x, y) {
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y".
   // Tu código:
+  dividendos = ((x % y) + y) % y;
+  return dividendos;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

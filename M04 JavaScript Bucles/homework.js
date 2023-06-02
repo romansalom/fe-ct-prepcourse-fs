@@ -1,5 +1,7 @@
 /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
 
+const { divide } = require('../M03 JavaScript Fundamentos/Ejercicio 02');
+
 function obtenerMayor(x, y) {
   // "x" e "y" son números enteros.
   // Retornar el número más grande.
@@ -128,7 +130,14 @@ function esEntero(num) {
   // Ejemplo: (-10) ---> true
   // De lo contrario, retorna false.
   // Tu código:
+
+  if (num % 1 == 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
+esEntero(-1);
 
 function fizzBuzz(num) {
   // Si "num" es divisible entre 3, retorna "fizz".
@@ -136,8 +145,20 @@ function fizzBuzz(num) {
   // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
   // De lo contrario, retorna false.
   // Tu código:
+  if (num % 5 === 0 && num % 3 === 0) {
+    return 'fizzbuzz';
+  } else if (num % 3 === 0) {
+    return 'fizz';
+  } else if (num % 5 === 0) {
+    return 'buzz';
+  } else if (num % 5 > 0 || num % 5 < 0) {
+    return false;
+  } else if (num % 3 > 0 || num % 3 < 0) {
+    return false;
+  }
 }
 
+fizzBuzz(26);
 function operadoresLogicos(num1, num2, num3) {
   // La función recibe tres números distintos.
   // Si num1 es mayor a num2 y a num3, y además es positivo, retornar ---> "Numero 1 es mayor y positivo".
@@ -146,7 +167,18 @@ function operadoresLogicos(num1, num2, num3) {
   // Si todos los argumentos son cero, retornar ---> "Error".
   // Si no se cumple ninguna de las condiciones anteriores, retornar false.
   // Tu código:
+  if (num1 > num2 && num1 > num3 && num1 >= 0) {
+    return 'Numero 1 es mayor y positivo';
+  } else if (num1 <= -1 || num2 <= -1 || num3 <= -1) {
+    return 'Hay negativos';
+  } else if (num3 > num1 && num3 > num2) {
+    agregarValor = num3 + 1;
+    return agregarValor;
+  } else if (num3 === 0 && num2 === 0 && num1 === 0) {
+    return 'Error';
+  } else return false;
 }
+operadoresLogicos(2, 2, 2);
 
 function esPrimo(num) {
   // Retornar true si "num" es primo.
@@ -155,26 +187,59 @@ function esPrimo(num) {
   // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
   // [Nota]: los números negativos, 0 y 1 NO son números primos.
   // Tu código:
+
+  if (num === 0 || num == 1 || num == 4) return false;
+  for (let x = 2; x < num / 2; x++) {
+    if (num % x == 0) return false;
+  }
+  if (num === 0 && num === 1) {
+    return false;
+  }
+  return true;
 }
+
+esPrimo(29);
 
 function esVerdadero(valor) {
   // Si "valor" es verdadero retornar "Soy verdadero".
   // Caso contrario, retornar "Soy falso".
   // Tu código:
+  if (valor === true) {
+    return 'Soy verdadero';
+  } else if (valor != 'verdadero') return 'Soy falso';
 }
+esVerdadero(true);
 
 function tieneTresDigitos(num) {
   // Si el número recibido tiene tres dígitos retornar true.
   // Caso contrario, retornar false.
   // Tu código:
+  if (num >= 100) {
+    return true;
+  } else if (num < 100) {
+    return false;
+  }
 }
+tieneTresDigitos(3);
 
 function doWhile(num) {
   // Implementar una función que aumente el valor recibido en 5 hasta un límite de 8 veces.
   // Retornar el valor final.
   // Utilizar el bucle Do-While.
   // Tu código:
+  var contador = 0;
+
+  do {
+    num += 5;
+    contador++;
+  } while (contador < 8);
+
+  return num;
 }
+
+// Ejemplo de uso
+var resultado = doWhile(1);
+console.log(resultado); // Salida: 50
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
